@@ -1,12 +1,11 @@
-image: synedra/datastax:gitpod
 tasks:
-  - name: netflix_thatconference
+  - name: netflix_thatconference2
     init: |
-      cd /workspace/netflix_thatconference
+      cd /workspace/netflix_thatconference2
       nvm install node
       npm install -g npm@latest
     command: |
-      cd /workspace/netflix_thatconference
+      cd /workspace/netflix_thatconference2
       git remote -v | grep datastaxdevs && echo "DO NOT USE THE DATASTAXDEVS WORKSPACE, PLEASE GO BACK TO THE INSTRUCTIONS TO SET UP YOUR OWN"
       git remote -v | grep -v datastaxdevs && echo "workshopgraphql-netflix gitpod ready - LET'S DO THIS!" && npm install
 ports:
